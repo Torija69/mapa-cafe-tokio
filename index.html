@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mapa de relaciones — Mis tardes en el pequeño café de Tokio</title>
+<meta name="description" content="Mapa interactivo de personajes de la novela Mis tardes en el pequeño café de Tokio, de Michiko Aoyama: el Maestro, Wataru, los clientes recurrentes y la red que conecta Tokio con Sídney." />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236b4226'/%3E%3Cpath d='M9 14h14v4a7 7 0 0 1-7 7 7 7 0 0 1-7-7v-4z' fill='%23f7f0e6'/%3E%3Cpath d='M23 15h2a3 3 0 0 1 0 6h-2' fill='none' stroke='%23f7f0e6' stroke-width='1.6'/%3E%3Cpath d='M12 9c0-1.5 1.4-1.5 1.4-3M16 9c0-1.5 1.4-1.5 1.4-3M20 9c0-1.5 1.4-1.5 1.4-3' stroke='%23e8a0bf' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://api.fontshare.com/v2/css?f[]=erode@400,500,600&f[]=zodiak@400,500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <svg class="brand-mark" width="34" height="34" viewBox="0 0 32 32" fill="none" aria-label="Café Marble">
+          <rect width="32" height="32" rx="7" fill="var(--color-primary)"/>
+          <path d="M9 14h14v4a7 7 0 0 1-7 7 7 7 0 0 1-7-7v-4z" fill="var(--color-surface)"/>
+          <path d="M23 15h2a3 3 0 0 1 0 6h-2" fill="none" stroke="var(--color-surface)" stroke-width="1.6"/>
+          <path d="M12 9c0-1.5 1.4-1.5 1.4-3M16 9c0-1.5 1.4-1.5 1.4-3M20 9c0-1.5 1.4-1.5 1.4-3" stroke="var(--color-error)" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="brand-text">
+          <p class="eyebrow">Michiko Aoyama · Novela coral</p>
+          <h1>Mapa de relaciones del Café Marble</h1>
+        </div>
+      </div>
+      <button class="theme-toggle" data-theme-toggle aria-label="Cambiar a modo oscuro" title="Cambiar tema"></button>
+    </div>
+    <p class="header-lede">
+      <em>Mis tardes en el pequeño café de Tokio</em> se construye como una cadena de doce capítulos —cada uno con su propio color— que arrancan junto al Maestro y Wataru en el diminuto Café Marble y se despliegan, cliente a cliente, hasta el Real Jardín Botánico de Sídney. Explora quién conoce a quién, qué vínculos son explícitos y cuáles solo se insinúan entre líneas, y cómo la historia entera acaba enlazándose otra vez sobre la misma taza de chocolate caliente.
+    </p>
+  </header>
+
+  <main class="layout">
+
+    <section class="graph-panel">
+      <div class="toolbar">
+        <div class="search-wrap">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+          <input id="search" type="text" placeholder="Buscar un personaje o un lugar…" autocomplete="off" />
+        </div>
+
+        <div class="chip-group" id="group-filters" role="group" aria-label="Filtrar por círculo narrativo">
+          <button class="chip active" data-group="all">Todos</button>
+          <button class="chip" data-group="cafe">Círculo del café</button>
+          <button class="chip" data-group="tokio">Red de Tokio</button>
+          <button class="chip" data-group="puente">Puente Tokio–Sídney</button>
+          <button class="chip" data-group="sidney">Red de Sídney</button>
+        </div>
+
+        <div class="chip-group" id="type-filters" role="group" aria-label="Filtrar por tipo de vínculo">
+          <button class="chip active" data-linktype="all">Todos los vínculos</button>
+          <button class="chip" data-linktype="explicit">Solo explícitos</button>
+          <button class="chip" data-linktype="implicit">Solo implícitos</button>
+        </div>
+
+        <button class="reset-btn" id="reset-view">Reiniciar vista</button>
+      </div>
+
+      <div class="graph-stage" id="graph-stage">
+        <svg id="graph-svg"></svg>
+
+        <div class="legend" id="legend">
+          <button class="legend-header" id="legend-toggle" type="button" aria-expanded="true" aria-controls="legend-body">
+            <span class="legend-title">Cómo leer el mapa</span>
+            <svg class="legend-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="legend-body" id="legend-body">
+            <div class="legend-row"><span class="legend-swatch ring-tokio"></span> Anillo cálido — personaje o lugar en Tokio</div>
+            <div class="legend-row"><span class="legend-swatch ring-sidney"></span> Anillo turquesa — personaje o lugar en Sídney</div>
+            <div class="legend-row"><span class="legend-swatch ring-ambos"></span> Anillo bicolor — se mueve entre ambas ciudades</div>
+            <div class="legend-row"><span class="legend-line solid"></span> Vínculo explícito (familia, pareja, trabajo)</div>
+            <div class="legend-row"><span class="legend-line dashed"></span> Vínculo implícito (coincidencia, eco narrativo)</div>
+            <div class="legend-row"><span class="legend-swatch place-shape"></span> Rombo — lugar (Café Marble / Jardín Botánico)</div>
+            <p class="legend-hint">El color de relleno de cada personaje es el color de su propio capítulo en la novela.</p>
+          </div>
+        </div>
+
+        <div class="hint-pill" id="hint-pill">Arrastra, haz zoom y pulsa sobre un nodo para seguir su hilo narrativo</div>
+      </div>
+
+      <div class="chapter-strip" id="chapter-strip" aria-label="Los doce capítulos de la novela, en orden">
+      </div>
+    </section>
+
+    <aside class="detail-panel" id="detail-panel">
+      <div class="detail-empty" id="detail-empty">
+        <p class="eyebrow">Estructura coral</p>
+        <h2>Un café, doce voces, dos ciudades</h2>
+        <p>Cada capítulo de la novela adopta el punto de vista de un personaje distinto y un color propio, empezando y terminando en el Café Marble de Tokio tras pasar por el Real Jardín Botánico de Sídney. Pulsa cualquier nodo del mapa —o cualquier capítulo de la franja inferior— para ver su ficha, sus vínculos explícitos e implícitos, y el capítulo en el que se revelan.</p>
+        <p class="detail-tip">Consejo: usa los filtros de arriba para aislar solo el círculo del café, la red que crece en Tokio, el puente que viaja a Sídney o el reparto australiano.</p>
+      </div>
+
+      <div class="detail-content" id="detail-content" hidden>
+        <button class="close-detail" id="close-detail" aria-label="Cerrar ficha">✕</button>
+        <span class="detail-kicker" id="detail-kicker"></span>
+        <h2 id="detail-name"></h2>
+        <p class="detail-role" id="detail-role"></p>
+        <p class="detail-bio" id="detail-bio"></p>
+
+        <h3 class="detail-sub">Conexiones (<span id="detail-count"></span>)</h3>
+        <ul class="detail-connections" id="detail-connections"></ul>
+      </div>
+    </aside>
+
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Fuentes usadas para reconstruir el reparto y sus vínculos:</strong></p>
+    <p class="footer-links">
+      <a href="https://educafuturo.cl/2025/06/12/resena-mis-tardes-en-el-pequeno-cafe-de-tokio/" target="_blank" rel="noopener">Educa Futuro — reseña</a> ·
+      <a href="https://www.bleisatz.blog/michiko-aoyama-donnerstags-im-cafe-unter-den-kirschbaeumen/" target="_blank" rel="noopener">Bleisatz — reseña</a> ·
+      <a href="https://forums.learnnatively.com/t/week-14/17419" target="_blank" rel="noopener">Learn Natively — lista de personajes por capítulo</a> ·
+      <a href="https://www.bookishelf.com/hot-chocolate-on-thursday-by-michiko-aoyama/" target="_blank" rel="noopener">The Bookish Elf — reseña</a> ·
+      <a href="https://booktrib.com/2026/03/25/hot-chocolate-on-thursday-michiko-aoyama/" target="_blank" rel="noopener">BookTrib — reseña</a> ·
+      <a href="https://queenoftreasures.com/2026/03/03/michiko-aoyama-hot-chocolate-on-thursday/" target="_blank" rel="noopener">Queen of Treasures — reseña</a> ·
+      <a href="https://japan-glossy.fr/un-jeudi-saveur-chocolat/" target="_blank" rel="noopener">Japan Glossy — reseña</a> ·
+      <a href="https://danslabibliothequedanne.com/2024/03/28/chronique-lecture-un-jeudi-saveur-chocolat-de-michiko-aoyama/" target="_blank" rel="noopener">Dans la bibliothèque d'Anne — reseña</a>
+    </p>
+    <p class="footer-note">Mapa no oficial, elaborado a partir de reseñas y extractos públicos de la novela con fines de análisis literario.</p>
+  </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
