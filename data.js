@@ -36,7 +36,7 @@ const NODES = [
     bio: "Diminuto local de tres mesas de madera escondido al final de una hilera de cerezos, junto a un río de Tokio. Es el corazón de la novela: casi todos los hilos narrativos nacen o regresan aquí."
   },
   {
-    id: "jardin", name: "Real Jardín Botánico de Sídney", type: "place", group: "lugar", place: "sidney",
+    id: "jardin", name: "Real Jardín Botánico de Sídney", label: "Jardín Botánico", type: "place", group: "lugar", place: "sidney",
     color: "#2f8f7a", role: "El espejo de Sídney",
     bio: "Jardín junto al puerto de Sídney donde confluyen varios personajes de la segunda mitad del libro: es el equivalente australiano del Café Marble, el lugar donde la novela 'respira' al otro lado del mundo."
   },

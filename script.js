@@ -83,12 +83,12 @@
 
   /* ---------- Simulation ---------- */
   const simulation = d3.forceSimulation(nodes)
-    .force('link', d3.forceLink(links).id((d) => d.id).distance((l) => (l.type === 'implicit' ? 130 : 90)).strength(0.55))
-    .force('charge', d3.forceManyBody().strength(-260))
+    .force('link', d3.forceLink(links).id((d) => d.id).distance((l) => (l.type === 'implicit' ? 160 : 120)).strength(0.5))
+    .force('charge', d3.forceManyBody().strength(-340))
     .force('center', d3.forceCenter(0, 0))
-    .force('collide', d3.forceCollide((d) => nodeRadius(d) + 14))
-    .force('x', d3.forceX().strength(0.03))
-    .force('y', d3.forceY().strength(0.03));
+    .force('collide', d3.forceCollide((d) => nodeRadius(d) + 26))
+    .force('x', d3.forceX().strength(0.025))
+    .force('y', d3.forceY().strength(0.025));
 
   /* ---------- Links ---------- */
   const linkSel = linkLayer.selectAll('line')
@@ -142,7 +142,7 @@
       .attr('class', 'node-label')
       .attr('y', r + 13)
       .attr('text-anchor', 'middle')
-      .text(d.name.length > 20 ? d.name.split(' (')[0] : d.name);
+      .text(d.label || (d.name.length > 20 ? d.name.split(' (')[0] : d.name));
   });
 
   function refreshGradient() {
