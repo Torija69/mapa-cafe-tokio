@@ -22,11 +22,11 @@ Mostrar un mapa interactivo de las relaciones entre los personajes de «Mis tard
 
 ## Datos
 
-- `data.js` contiene `CHAPTERS`, los personajes, las relaciones y los lugares. Las fuentes son reseñas públicas (educafuturo.cl, bleisatz.blog, forums.learnnatively.com y reseñas en inglés y francés). No hay datos personales.
+- `data.js` contiene `CONFIG` (textos de la página, lugares y colores de anillo, grupos, leyenda, icono y fuentes), `CHAPTERS`, `NODES` y `EDGES`. `comprobar_mapa.js` valida que las referencias sean coherentes. Las fuentes son reseñas públicas (educafuturo.cl, bleisatz.blog, forums.learnnatively.com y reseñas en inglés y francés). No hay datos personales.
 
 ## Patrón
 
-Mapa de relaciones de un libro (ver `catalogo-proyectos/componentes.md`), con estructura de cuatro ficheros: `index.html`, `style.css`, `script.js` y `data.js`.
+Mapa de relaciones de un libro (ver `catalogo-proyectos/componentes.md`), basado en la plantilla `catalogo-proyectos/plantillas/mapa-libro/`: `index.html` y `script.js` son los de la plantilla y no se tocan; lo propio de este libro está en `data.js` y la paleta en `style.css`.
 
 ## Criterios de aceptación
 

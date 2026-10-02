@@ -1,3 +1,100 @@
+/* Configuración de la página (textos, lugares, grupos, fuentes). Ver catalogo-proyectos/plantillas/mapa-libro/LEEME.md */
+const CONFIG = {
+  "libro": "Mis tardes en el pequeño café de Tokio",
+  "autor": "Michiko Aoyama",
+  "antetitulo": "Michiko Aoyama · Novela coral",
+  "titulo": "Mapa de relaciones del Café Marble",
+  "descripcion": "Mapa interactivo de personajes de la novela Mis tardes en el pequeño café de Tokio, de Michiko Aoyama: el Maestro, Wataru, los clientes recurrentes y la red que conecta Tokio con Sídney.",
+  "intro": "<em>Mis tardes en el pequeño café de Tokio</em> se construye como una cadena de doce capítulos —cada uno con su propio color— que arrancan junto al Maestro y Wataru en el diminuto Café Marble y se despliegan, cliente a cliente, hasta el Real Jardín Botánico de Sídney. Explora quién conoce a quién, qué vínculos son explícitos y cuáles solo se insinúan entre líneas, y cómo la historia entera acaba enlazándose otra vez sobre la misma taza de chocolate caliente.",
+  "favicon": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%236b4226'/%3E%3Cpath d='M9 14h14v4a7 7 0 0 1-7 7 7 7 0 0 1-7-7v-4z' fill='%23f7f0e6'/%3E%3Cpath d='M23 15h2a3 3 0 0 1 0 6h-2' fill='none' stroke='%23f7f0e6' stroke-width='1.6'/%3E%3Cpath d='M12 9c0-1.5 1.4-1.5 1.4-3M16 9c0-1.5 1.4-1.5 1.4-3M20 9c0-1.5 1.4-1.5 1.4-3' stroke='%23e8a0bf' stroke-width='1.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E",
+  "icono": "<rect width=\"32\" height=\"32\" rx=\"7\" fill=\"var(--color-primary)\"/> <path d=\"M9 14h14v4a7 7 0 0 1-7 7 7 7 0 0 1-7-7v-4z\" fill=\"var(--color-surface)\"/> <path d=\"M23 15h2a3 3 0 0 1 0 6h-2\" fill=\"none\" stroke=\"var(--color-surface)\" stroke-width=\"1.6\"/> <path d=\"M12 9c0-1.5 1.4-1.5 1.4-3M16 9c0-1.5 1.4-1.5 1.4-3M20 9c0-1.5 1.4-1.5 1.4-3\" stroke=\"var(--color-error)\" stroke-width=\"1.4\" fill=\"none\" stroke-linecap=\"round\"/>",
+  "lugares": {
+    "tokio": {
+      "nombre": "Tokio",
+      "descripcion": "cálido — personaje o lugar en Tokio",
+      "color": {
+        "claro": "#8a4a2b",
+        "oscuro": "#d99461"
+      }
+    },
+    "sidney": {
+      "nombre": "Sídney",
+      "descripcion": "turquesa — personaje o lugar en Sídney",
+      "color": {
+        "claro": "#1c7d70",
+        "oscuro": "#5cc0af"
+      }
+    }
+  },
+  "leyendaAmbos": "Anillo bicolor — se mueve entre ambas ciudades",
+  "leyendaLugar": "Rombo — lugar (Café Marble / Jardín Botánico)",
+  "notaLeyenda": "El color de relleno de cada personaje es el color de su propio capítulo en la novela.",
+  "grupos": {
+    "cafe": {
+      "nombre": "Círculo del café",
+      "color": "#8a4a2b"
+    },
+    "tokio": {
+      "nombre": "Red de Tokio",
+      "color": "#b98328"
+    },
+    "puente": {
+      "nombre": "Puente Tokio–Sídney",
+      "color": "#c9698c"
+    },
+    "sidney": {
+      "nombre": "Red de Sídney",
+      "color": "#1c7d70"
+    }
+  },
+  "destacados": [
+    "maestro",
+    "wataru",
+    "maco"
+  ],
+  "panel": {
+    "antetitulo": "Estructura coral",
+    "titulo": "Un café, doce voces, dos ciudades",
+    "texto": "Cada capítulo de la novela adopta el punto de vista de un personaje distinto y un color propio, empezando y terminando en el Café Marble de Tokio tras pasar por el Real Jardín Botánico de Sídney. Pulsa cualquier nodo del mapa —o cualquier capítulo de la franja inferior— para ver su ficha, sus vínculos explícitos e implícitos, y el capítulo en el que se revelan.",
+    "consejo": "Consejo: usa los filtros de arriba para aislar solo el círculo del café, la red que crece en Tokio, el puente que viaja a Sídney o el reparto australiano."
+  },
+  "fuentes": [
+    {
+      "nombre": "Educa Futuro — reseña",
+      "url": "https://educafuturo.cl/2025/06/12/resena-mis-tardes-en-el-pequeno-cafe-de-tokio/"
+    },
+    {
+      "nombre": "Bleisatz — reseña",
+      "url": "https://www.bleisatz.blog/michiko-aoyama-donnerstags-im-cafe-unter-den-kirschbaeumen/"
+    },
+    {
+      "nombre": "Learn Natively — lista de personajes por capítulo",
+      "url": "https://forums.learnnatively.com/t/week-14/17419"
+    },
+    {
+      "nombre": "The Bookish Elf — reseña",
+      "url": "https://www.bookishelf.com/hot-chocolate-on-thursday-by-michiko-aoyama/"
+    },
+    {
+      "nombre": "BookTrib — reseña",
+      "url": "https://booktrib.com/2026/03/25/hot-chocolate-on-thursday-michiko-aoyama/"
+    },
+    {
+      "nombre": "Queen of Treasures — reseña",
+      "url": "https://queenoftreasures.com/2026/03/03/michiko-aoyama-hot-chocolate-on-thursday/"
+    },
+    {
+      "nombre": "Japan Glossy — reseña",
+      "url": "https://japan-glossy.fr/un-jeudi-saveur-chocolat/"
+    },
+    {
+      "nombre": "Dans la bibliothèque d'Anne — reseña",
+      "url": "https://danslabibliothequedanne.com/2024/03/28/chronique-lecture-un-jeudi-saveur-chocolat-de-michiko-aoyama/"
+    }
+  ],
+  "notaPie": "Mapa no oficial, elaborado a partir de reseñas y extractos públicos de la novela con fines de análisis literario."
+};
+
 /* ============================================================
    Datos del mapa de relaciones — "Mis tardes en el pequeño
    café de Tokio" (Michiko Aoyama)
