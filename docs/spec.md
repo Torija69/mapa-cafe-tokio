@@ -32,3 +32,12 @@ Mapa de relaciones de un libro (ver `catalogo-proyectos/componentes.md`), basado
 
 - Cada capítulo de la novela tiene su personaje y su color en el mapa.
 - En el móvil, la leyenda no tapa el grafo.
+
+## Adaptación Torija v1.2.0
+
+- Adopción expresa de Torija 1.0.0, sin modificar contenido ni reglas del mapa.
+- Excepción al HTML de plantilla: marco de presentación con recursos Torija locales. El motor `script.js`, la paleta base `style.css` y `data.js` se conservan byte a byte.
+- Introducción completa desplegable; leyenda bajo el lienzo, abierta en escritorio y cerrada inicialmente en móvil.
+- Mantener modo oscuro y colores narrativos; teclado para nodos, capítulos y conexiones.
+- D3 7.9.0 con SRI requiere Internet; no hay servidor de aplicación ni base de datos.
+- Se entrega vista previa del mapa existente; publicación y main pendientes de aprobación.
