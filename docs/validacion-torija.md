@@ -22,4 +22,5 @@
 
 - Seis pruebas automatizadas por proyecto y comprobación de datos/enlaces.
 - Paquete de15 recursos de ejecución en `dist/public/`, sin documentación interna.
-- Pendiente validar la vista previa alojada. Publicación e integración en main requieren aprobación del usuario.
+- Vista previa alojada verificada en un contexto nuevo: datos idénticos, ficha, teclado, filtros, búsqueda, temas, móvil y leyenda sin superposición ni errores.
+- Publicación e integración en main requieren aprobación del usuario.
