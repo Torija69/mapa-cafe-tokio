@@ -1,6 +1,6 @@
 # Validación Torija v1.2.0
 
-23 de octubre de 2026. Vista previa, sin publicar.
+23 de octubre de 2026. Publicación autorizada de la vista previa revisada.
 
 ## Integridad
 
@@ -23,4 +23,4 @@
 - Seis pruebas automatizadas por proyecto y comprobación de datos/enlaces.
 - Paquete de15 recursos de ejecución en `dist/public/`, sin documentación interna.
 - Vista previa alojada verificada en un contexto nuevo: datos idénticos, ficha, teclado, filtros, búsqueda, temas, móvil y leyenda sin superposición ni errores.
-- Publicación e integración en main requieren aprobación del usuario.
+- El usuario ha autorizado expresamente publicar e integrar en main. Verificar de nuevo el enlace público tras la publicación.

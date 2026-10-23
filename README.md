@@ -7,7 +7,7 @@ Mapa de relaciones de Mis tardes en el pequeño café de Tokio (Michiko Aoyama)
 - Reglas para agentes: `AGENTS.md`
 - Especificación: `docs/spec.md`
 
-## Vista previa Torija v1.2.0
+## Torija v1.2.0
 
 Diseño Torija 1.0.0: cabecera carbón, controles lima, marfil y fuentes Cabinet Grotesk/Satoshi locales. Los colores de capítulos y ciudades y el modo oscuro preexistente se conservan. La introducción es desplegable y la leyenda está debajo del lienzo para no tapar nodos.
 
@@ -17,4 +17,4 @@ Diseño Torija 1.0.0: cabecera carbón, controles lima, marfil y fuentes Cabinet
 - Preparar el paquete web: `python3 scripts/preparar_web.py` (solo runtime en `dist/public/`).
 - Pruebas: `python3 -m unittest discover -s tests` y `node comprobar_mapa.js`.
 - Dependencia: D3 7.9.0 desde jsDelivr, con integridad SRI. Las fuentes no realizan conexiones externas.
-- Web vigente: https://mistardecafetokio.pplx.app/ . La candidata no se integra en main ni se publica hasta aprobación.
+- Web de referencia: https://mistardecafetokio.pplx.app/ . Publicación de v1.2.0 expresamente autorizada tras revisar la vista previa; conservar la dirección existente.

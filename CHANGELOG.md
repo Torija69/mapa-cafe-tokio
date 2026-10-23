@@ -1,13 +1,13 @@
 # Changelog — mapa-cafe-tokio
 
-## 1.2.0 — 2026-10-23 · Vista previa
+## 1.2.0 — 2026-10-23
 
 - Sistema Torija 1.0.0 en marco, tipografía y controles, con fuentes locales.
 - Introducción desplegable y leyenda fuera del lienzo para no tapar personajes.
 - Nodos y conexiones activables con teclado y etiquetas de filtros/tema accesibles; texto del distintivo de grupo con contraste adaptado.
 - Modo oscuro preexistente conservado; capítulos, ciudades, vínculos, datos y motor originales intactos.
 - D3 fijado a 7.9.0 con SRI, paquete web mínimo y pruebas de integridad.
-- Publicación e integración en main pendientes de aprobación.
+- Publicación autorizada por el usuario tras revisar la vista previa; conservar el enlace existente.
 
 ## 1.1.0 — 2026-10-02
 

@@ -40,4 +40,4 @@ Mapa de relaciones de un libro (ver `catalogo-proyectos/componentes.md`), basado
 - Introducción completa desplegable; leyenda bajo el lienzo, abierta en escritorio y cerrada inicialmente en móvil.
 - Mantener modo oscuro y colores narrativos; teclado para nodos, capítulos y conexiones.
 - D3 7.9.0 con SRI requiere Internet; no hay servidor de aplicación ni base de datos.
-- Se entrega vista previa del mapa existente; publicación y main pendientes de aprobación.
+- Vista previa del mapa existente revisada; publicación e integración en main expresamente autorizadas por el usuario.
