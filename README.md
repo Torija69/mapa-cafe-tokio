@@ -3,7 +3,7 @@
 Mapa de relaciones de Mis tardes en el pequeño café de Tokio (Michiko Aoyama)
 
 - Versión: 1.2.0
-- Web: https://torijamistardesenelpequenocafedetokio.pplx.app/
+- Web: https://torija69.github.io/mapa-cafe-tokio/ (GitHub Pages desde la rama main; antes en Perplexity)
 - Acceso: publicación restringida; requiere una cuenta autorizada de Perplexity.
 - Código reconciliado el 25 de octubre de 2026 con los archivos originales de la publicación v1.2.0 del 23 de octubre. No se ha republicado ni cambiado su visibilidad.
 - Diseño: Torija 1.0.0, con estilos y fuentes locales y capa accesible `torija-ui.js`.
