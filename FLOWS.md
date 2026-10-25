@@ -7,3 +7,7 @@
 - Comprobar tema de ida y vuelta, presentación, leyenda y adaptación escritorio/móvil.
 - Verificar integridad y correspondencia de fuentes locales; sin errores nuevos de consola.
 - URL definitiva en README y GitHub; mantener el acceso restringido, sin republicar.
+
+## Resultado del 25 de octubre
+
+PASS: validación de 22 nodos, 36 vínculos y 12 capítulos; búsqueda con y sin coincidencias, filtros, capítulos, ficha, conexiones, cierre, selección por teclado, reinicio, tema y presentación. Leyenda comprobada al pasar de escritorio a móvil y de vuelta, sin desbordamiento global ni errores JavaScript. Los seis archivos de fuentes coinciden por SHA256 con los de la publicación autenticada. Sin cambios de datos, motor o estilo base.
