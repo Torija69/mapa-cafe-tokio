@@ -1,5 +1,11 @@
 # Changelog — mapa-cafe-tokio
 
+## 1.2.0 · 2026-10-23
+
+- Presentación Torija 1.0.0: fuentes locales, estilos propios, tema claro/oscuro y controles accesibles.
+- El 25 de octubre se incorporan a GitHub los archivos originales de esa publicación para corregir el desfase con v1.1.0. `data.js`, `script.js` y `style.css` permanecen idénticos a los de v1.1.0.
+- URL definitiva: https://torijamistardesenelpequenocafedetokio.pplx.app/ . Publicación restringida; no se modifica la visibilidad ni se vuelve a publicar.
+
 ## 1.1.0 — 2026-10-02
 
 - Usa la plantilla única de mapa de libro del catálogo: `index.html` y `script.js` genéricos y toda la configuración del libro en `CONFIG` dentro de `data.js`. El mapa se ve y funciona igual (comprobado elemento a elemento).
